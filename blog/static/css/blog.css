@@ -3,19 +3,19 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     line-height: 1.42857143;
-    color: #333;
+    color: black;
     background-color: white;
 }
 
-h1, h1 a, h1 a:visited {
+.post h1, h1 a, h1 a:visited {
     font-family: 'Playfair Display', serif;
-    color: #333;
+    color: black;
     text-decoration-line: underline;
     font-size: 43px;
 }
 
 h1 a:hover {
-    color: #333;
+    color: black;
 }
 
 h2, h2 a {
@@ -28,33 +28,71 @@ b{
 }
 
 .page-header {
-    background-color: #C25100;
     margin-left: 60px;
     margin-right:70px;
-    margin-top:30px;
+    margin-top:50px;
+    margin-bottom: 50px;
     padding: 40px 20px 60px 120px;
-    background-color: #efefef;
+    background-color: transparent;
+    border:1px solid black;
     height:450px;
-    border-radius:58% 42% 62% 38% / 26% 34% 66% 74% ;
+    border-radius: 44% 56% 38% 62% / 51% 58% 42% 49% ;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    font-size: 60pt;
+.page-header h1{
+    text-shadow: 5px -5px #C25100, 4px 1px rgb(243, 199, 76);
+    margin-left:70px;
+    transform: skewX(-8deg);
+}
+
+.page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    font-size: 90pt;
+    margin-left:-20px;
+    background-color:black;
     text-decoration: none;
-    color: #333;
+    color: white;
     letter-spacing: 0.5px;
     font-family: 'Lora', serif;
-    transition:0.5s;
+    transition:0.8s;
+    padding: 10px 0px;
 }
 
 .page-header h1 a:hover{
     letter-spacing: 4px;
+    /*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #C25100, 0 0 30px #C25100, 0 0 40px #C25100, 0 0 55px #C25100, 0 0 75px #C25100;
+    */
     transition:0.5s;
 }
 
 .page-header p{
-    margin-left:-40px;
     max-width:500px;
+    background-color:#C25100;
+    width:fit-content;
+    padding:5px;
+    color:white;
+    position: relative;
+    z-index:99999;
+}
+
+.shape_1{
+    width:50%;
+    height:462px;
+    border-radius: 30% 70% 70% 30% / 44% 30% 70% 56% ;
+    background-image: linear-gradient(to right, #C25100, rgb(243, 199, 76));
+    position: absolute;
+    z-index:-1;
+    margin-left:15%;
+    margin-top:-80px;
+}
+
+.shape_2{
+    width:70%;
+    height:450px;
+    border-radius: 76% 24% 70% 30% / 68% 72% 28% 32%;
+    background-image: url('https://puu.sh/FZn4c/3b0435ee7e.png');
+    position: absolute;
+    z-index:-2;
+    margin-top:-60px;
 }
 
 .content {
@@ -85,21 +123,21 @@ b{
 .header_links{
     text-decoration: none;
     width: fit-content;
-    border: 1px solid transparent;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: -10px;
     margin-left:-53px;
+    font-size:25px;
     font-family:'Noto Sans JP', sans-serif;
 }
 
 .header_links a, a:visited {
-    background-color: transparent;
+    background-color: white;
     width: fit-content;
-    padding: 0px 5px;
+    padding: 0px 8px;
     display: inline-block;
     margin: 10px 15px;
-    color: #333;
-    border-bottom:5px solid #C25100;
+    color:black;
+    border-bottom:5px solid black;
     /*
     box-shadow: 0px 2px 15px 0px rgba(209, 105, 31, 0.7);
     border-radius: 20px 20px;
@@ -108,8 +146,10 @@ b{
 }
 
 .header_links a:hover{
-    color: #C25100;
+    color: white;
+    text-shadow: -3px 0 #C25100;
     border-bottom:5px solid transparent;
+    background-color:black;
     text-decoration: none;
     box-shadow: none;
 }
@@ -147,7 +187,7 @@ b{
     width: 600px;
     border-radius: 10px 10px;
     /*border-radius:58% 42% 62% 38% / 26% 34% 66% 74% ;*/
-    box-shadow: 5px 5px 10px #ccc;
+    box-shadow: 8px 8px 1px #ededed;
     background-color:white;
     z-index:9999;
     transition: 1s;
@@ -163,13 +203,13 @@ b{
 .col-md-8 .post:nth-child(even):hover{
     margin-top:20px;
     margin-right: -275px;
-    box-shadow: 15px -5px 15px #ccc;
+    box-shadow: 10px -8px 1px #ededed;
     transition:1s;
 }
 
 .accent_line{
     margin-top: 5px;
-    width:65px;
+    width:75px;
     height:5px;
     background-color: #C25100;
     vertical-align: 50%;
