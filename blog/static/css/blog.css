@@ -41,13 +41,12 @@ b{
 
 .page-header h1{
     text-shadow: 5px -5px #C25100, 4px 1px rgb(243, 199, 76);
-    margin-left:70px;
     transform: skewX(-8deg);
 }
 
 .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     font-size: 90pt;
-    margin-left:-20px;
+    margin-left:-100px;
     background-color:black;
     text-decoration: none;
     color: white;
