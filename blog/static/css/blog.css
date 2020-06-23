@@ -153,24 +153,19 @@ b{
     transition: 1s;
 }
 
-.post_detail .post:hover{
-    animation:none;
-}
-
-.post:hover{
+.col-md-8 .post:hover{
     margin-left: 15px;
     margin-top:20px;
     box-shadow:none;
     transition:1s;
 }
 
-.post:nth-child(even):hover{
+.col-md-8 .post:nth-child(even):hover{
     margin-top:20px;
     margin-right: -275px;
     box-shadow: 15px -5px 15px #ccc;
     transition:1s;
 }
-
 
 .accent_line{
     margin-top: 5px;
@@ -259,7 +254,9 @@ b{
     width:800px;
     box-shadow: none;
     border:none;
-    margin-top:-50px;
+    border:1px solid black;
+    margin-left: 90px;
+    margin-top: 50px;
 }
 
 .post-form textarea, .post-form input {
