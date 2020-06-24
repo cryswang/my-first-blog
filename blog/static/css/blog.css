@@ -179,13 +179,28 @@ b{
     float: right;
 }
 
+.exp {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #333;
+    width: 900px;
+    border-radius: 10px 10px;
+    /*border-radius:58% 42% 62% 38% / 26% 34% 66% 74% ;*/
+    z-index:9999;
+    text-align:left;
+    transition: 1s;
+}
+
+.exp h1{
+    font-family: 'Playfair Display', serif;
+}
+
 .post {
     margin-bottom: 70px;
     padding: 10px;
     border: 1px solid #333;
     width: 600px;
     border-radius: 10px 10px;
-    /*border-radius:58% 42% 62% 38% / 26% 34% 66% 74% ;*/
     box-shadow: 8px 8px 1px #ededed;
     background-color:white;
     z-index:9999;
