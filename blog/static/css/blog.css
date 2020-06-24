@@ -202,7 +202,7 @@ b{
 .col-md-8 .post:nth-child(even):hover{
     margin-top:20px;
     margin-right: -275px;
-    box-shadow: 10px -8px 1px #ededed;
+    box-shadow: 10px -1px 1px #ededed;
     transition:1s;
 }
 

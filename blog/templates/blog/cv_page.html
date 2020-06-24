@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<h1>Education.</h1>
+<h1>Experiences.</h1>
+    <div class="post_detail">
+        {% for experience in experiences %}
+            <div class="post">
+                <div class="accent_line"></div>
+                <h1>
+                    {{ experience.company }}.
+                </h1>
+                <h2>{{ experience.title }}</h2>
+                <p>{{ experience.work_period }}</p>
+                <p>{{ experience.description| safe | linebreaksbr }}</p>
+                <br>
+                <div class="connecting_line"></div>
+                <div class="date">
+                    {{ experience.location }}
+                </div>
+
+            </div>
+        {% endfor %}
+     </div>
+<h1>Projects.</h1>
+<h1>Skills.</h1>
+<h1>Involvement.</h1>
+
+{% endblock %}
