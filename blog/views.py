@@ -45,3 +45,28 @@ def bio_page(request):
 def cv_page(request):
     experiences = Experience.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/cv_page.html', {'experiences': experiences})
+
+def experience_new(request):
+    if request.method == "POST":
+        form = ExperienceForm(request.POST)
+        if form.is_valid():
+            experience = form.save(commit=False)
+            experience.published_date = timezone.now()
+            experience.save()
+            return redirect('cv_page')
+    else:
+        form = ExperienceForm()
+    return render(request, 'blog/experience_edit.html', {'form': form})
+
+def experience_edit(request, pk):
+    experience = get_object_or_404(Experience, pk=pk)
+    if request.method == "POST":
+        form = ExperienceForm(request.POST, instance=experience)
+        if form.is_valid():
+            experience = form.save(commit=False)
+            experience.published_date = timezone.now()
+            experience.save()
+            return redirect('cv_page', pk=experience.pk)
+    else:
+        form = ExperienceForm(instance=experience)
+    return render(request, 'blog/experience_edit.html', {'form': form})
