@@ -7,7 +7,7 @@
             <div class="post_content">
             <div class="accent_line"></div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">
-                {{ post.title }}.
+              <b style="font-weight:600;"> {{ post.title }}. </b> 
             </a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
             <br>

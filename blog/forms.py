@@ -12,4 +12,4 @@ class ExperienceForm(forms.ModelForm):
 
     class Meta:
         model = Experience
-        fields = ('company', 'title', 'description', 'location', 'work_period')
+        fields = ('company', 'title', 'description', 'location', 'work_period',)

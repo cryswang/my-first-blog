@@ -1,6 +1,7 @@
 body {
     padding-left: 15px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     font-size: 17px;
     line-height: 1.42857143;
     color: black;
@@ -14,17 +15,38 @@ body {
     font-size: 43px;
 }
 
+.cv_page h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size:50px;
+    font-weight: 800;
+    padding:8px 15px;
+    background-color:black;
+    color:white;
+    text-transform: lowercase;
+    width:fit-content;
+    box-shadow: 8px 8px 1px #ededed;
+}
+
+.cv_page h4 {
+    font-family: 'Playfair Display', serif;
+    font-size:20px;
+    font-weight: 600;
+    font-style: italic;
+    color:white;
+    padding:8px 15px;
+    width:fit-content;
+    border-radius:10px;
+    background-image: linear-gradient(to top right, #C25100, rgb(243, 199, 76));
+    text-shadow: 1px -1px rgb(243, 199, 76);
+}
+
 h1 a:hover {
     color: black;
 }
 
 h2, h2 a {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size:inherit;
-}
-
-b{
-    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .page-header {
@@ -51,7 +73,7 @@ b{
     text-decoration: none;
     color: white;
     letter-spacing: 0.5px;
-    font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
     transition:0.8s;
     padding: 10px 0px;
 }
@@ -126,7 +148,8 @@ b{
     margin-bottom: -10px;
     margin-left:-53px;
     font-size:25px;
-    font-family:'Noto Sans JP', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:600;
 }
 
 .header_links a, a:visited {
@@ -147,6 +170,7 @@ b{
 .header_links a:hover{
     color: white;
     text-shadow: -3px 0 #C25100;
+    text-transform: italic;
     border-bottom:5px solid transparent;
     background-color:black;
     text-decoration: none;
@@ -154,7 +178,8 @@ b{
 }
 
 .date {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:600;
     text-transform: uppercase;
     width: fit-content;
     padding: 5px 10px;
@@ -179,20 +204,125 @@ b{
     float: right;
 }
 
+.edu {
+    margin-bottom: 20px;
+    margin-top:30px;
+    padding: 0px 30px;
+    border: 1px solid black;
+    width: 900px;
+    height:462px;
+    border-radius: 10px 10px;
+    transition: 1s;
+    text-align:right;
+}
+
+.edu h1{
+    font-family: 'Playfair Display', serif;
+    font-size:60px;
+    font-weight:800;
+    padding:10px;
+    background: -webkit-linear-gradient(bottom left, #C25100, rgb(243, 199, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.edu .accent_line{
+    float:right;
+    background-color: black;
+}
+
+.edu .additional_info{
+    position:absolute;
+    border: 1px solid black;
+    margin-right:50px;
+    margin-top:-60px;
+    height:185px;
+}
+
+.edu .desc {
+    float:right;
+    border:2px solid black;
+    margin:20px -15px 0 0;
+    height:185px;
+    font-size:20px;
+}
+
 .exp {
     margin-bottom: 20px;
+    margin-top:20px;
     padding: 10px;
-    border: 1px solid #333;
-    width: 900px;
+    border: 1px solid transparent;
+    width: 830px;
+    height:462px;
     border-radius: 10px 10px;
     /*border-radius:58% 42% 62% 38% / 26% 34% 66% 74% ;*/
-    z-index:9999;
-    text-align:left;
     transition: 1s;
 }
 
 .exp h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size:40px;
+    margin-left:20px;
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.exp h2 {
+    color: #C25100;
     font-family: 'Playfair Display', serif;
+    font-weight:800;
+    font-size:25px;
+    position: relative;
+    display: inline-block;
+    text-transform: lowercase;
+    font-style:italic;
+}
+
+.exp .accent_line{
+    background-image:linear-gradient(to right, #C25100, rgb(243, 199, 76));
+    margin-left:15px;
+    width:500px;
+}
+
+.additional_info{
+    float: left;
+    width: 175px;
+    height:316px;
+    padding: 5px;
+    font-weight:400;
+    margin: 20px 15px 0px 16px;
+    color:#C25100;
+    background-color:white;
+    /*background-image:linear-gradient(to bottom right, #C25100, rgb(243, 199, 76));
+    */
+    border-radius: 10px;
+}
+
+.additional_info p{
+    text-transform: lowercase;
+}
+
+.desc {
+    float:left;
+    width:550px;
+    font-family: 'Roboto', sans-serif;
+    height:315px;
+    padding: 18px 25px;
+    margin: 20px 15px -40px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.desc ul {
+    list-style-type: '⚬';
+    margin-top:-27px;
+    margin-left:-25px;
+}
+
+.desc li{
+    padding-left:25px;
 }
 
 .post {
