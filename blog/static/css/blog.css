@@ -205,15 +205,14 @@ h2, h2 a {
 }
 
 .edu {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     margin-top:30px;
     padding: 0px 30px;
-    border: 1px solid black;
     width: 900px;
     height:462px;
     border-radius: 10px 10px;
     transition: 1s;
-    text-align:right;
+    text-align:center;
 }
 
 .edu h1{
@@ -221,28 +220,53 @@ h2, h2 a {
     font-size:60px;
     font-weight:800;
     padding:10px;
+    text-align:right;
     background: -webkit-linear-gradient(bottom left, #C25100, rgb(243, 199, 76));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+.edu h2 {
+    font-family:'Open Sans', serif;
+    text-transform:uppercase;
+    font-weight:700;
+    font-size:20px;
+    background:#C25100;
+    color:white;
+    padding:5px 8px;
+    border-radius:10px;
+    width:fit-content;
+    margin-top:10px;
+}
+
 .edu .accent_line{
     float:right;
     background-color: black;
+    width:150px;
 }
 
 .edu .additional_info{
-    position:absolute;
-    border: 1px solid black;
-    margin-right:50px;
-    margin-top:-60px;
+    float:right;
     height:185px;
+    margin-bottom:-10px;
+    margin-right:50px;
+}
+
+.edu .additional_info p{
+    color: #C25100;
+    font-size:22px;
+    margin-top:-10px;
+    margin-bottom:10px;
+    background: -webkit-linear-gradient(bottom left, #C25100, #C25100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight:700;
 }
 
 .edu .desc {
     float:right;
     border:2px solid black;
-    margin:20px -15px 0 0;
+    margin:20px 10px -10px 0px;
     height:185px;
     font-size:20px;
 }
@@ -280,6 +304,7 @@ h2, h2 a {
     font-style:italic;
 }
 
+
 .exp .accent_line{
     background-image:linear-gradient(to right, #C25100, rgb(243, 199, 76));
     margin-left:15px;
@@ -302,6 +327,12 @@ h2, h2 a {
 
 .additional_info p{
     text-transform: lowercase;
+    background: -webkit-linear-gradient(top left, #C25100, rgb(243, 199, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:20px;
+    padding-top:10px;
+    margin-bottom:-10px;
 }
 
 .desc {
