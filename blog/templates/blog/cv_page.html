@@ -72,8 +72,9 @@
 {% if user.is_authenticated %}
 <a href="{% url 'skill_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 {% endif %}
+
+<center>
 <div class="skills_box">
-    <center>
     {% for skill in skills %}
         {% if skill.experienced %}
             <div class="skill_e">{{ skill.title }}</div>
@@ -81,8 +82,9 @@
             <div class="skill_f">{{ skill.title }}</div>
         {% endif %}
     {% endfor %}
-    </center>
 </div>
+</center>
+
 <br>
 <h3>Involvement.</h3>
 {% if user.is_authenticated %}
