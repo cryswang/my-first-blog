@@ -1,13 +1,12 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
-from tinymce.models import HTMLField
 
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    text = models.TextField()
+    text =  models.TextField(default="text")
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
@@ -21,7 +20,7 @@ class Post(models.Model):
 class Experience(models.Model):
     company = models.CharField(max_length=200, default="company")
     title = models.CharField(max_length=200, default="Intern")
-    description = HTMLField()
+    description =  models.TextField(default="desc")
     location = models.CharField(max_length=200, default="place, place")
     work_period = models.CharField(max_length=200, default="date - date")
     published_date = models.DateTimeField(blank=True, null=True)
@@ -47,7 +46,7 @@ class Skill(models.Model):
 
 class Project(models.Model):
     title = models.CharField(max_length=200, default="project")
-    description =  HTMLField()
+    description =  models.TextField(default="desc")
     work_period = models.CharField(max_length=200, default="date - date")
 
     def publish(self):
@@ -60,7 +59,7 @@ class Project(models.Model):
 class Involvement(models.Model):
     name = models.CharField(max_length=200, default="involvement")
     role = models.CharField(max_length=200, default="member")
-    description =  HTMLField()
+    description =  models.TextField(default="desc")
     work_period = models.CharField(max_length=200, default="date - date")
 
     def publish(self):
