@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.utils import timezone
 from django.shortcuts import redirect, get_object_or_404, render
-from .models import Post, Experience
-from .forms import PostForm, ExperienceForm
+from .models import Post, Experience, Skill, Project
+from .forms import PostForm, ExperienceForm, SkillsForm, ProjectForm
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -32,7 +32,6 @@ def post_edit(request, pk):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            post.published_date = timezone.now()
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -44,7 +43,9 @@ def bio_page(request):
 
 def cv_page(request):
     experiences = Experience.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/cv_page.html', {'experiences': experiences})
+    skills = Skill.objects.order_by('level')
+    projects = Project.objects.all()
+    return render(request, 'blog/cv_page.html', {'experiences': experiences, 'skills': skills, 'projects': projects})
 
 def experience_new(request):
     if request.method == "POST":
@@ -64,9 +65,20 @@ def experience_edit(request, pk):
         form = ExperienceForm(request.POST, instance=experience)
         if form.is_valid():
             experience = form.save(commit=False)
-            experience.published_date = timezone.now()
             experience.save()
-            return redirect('cv_page', pk=experience.pk)
+            return redirect('cv_page')
     else:
         form = ExperienceForm(instance=experience)
     return render(request, 'blog/experience_edit.html', {'form': form})
+
+def skill_new(request):
+    if request.method == "POST":
+        form = SkillsForm(request.POST)
+        if form.is_valid():
+            skill = form.save(commit=False)
+            skill.published_date = timezone.now()
+            skill.save()
+            return redirect('cv_page')
+    else:
+        form = SkillsForm()
+    return render(request, 'blog/skill_edit.html', {'form': form})

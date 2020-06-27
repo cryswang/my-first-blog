@@ -182,11 +182,11 @@ h2, h2 a {
     font-weight:600;
     text-transform: uppercase;
     width: fit-content;
-    padding: 5px 10px;
+    padding: 5px 15px;
     font-size:14px;
     color:white;
     float:left;
-    border-radius: 10px 10px;
+    border-radius: 20px;
     margin-bottom:20px;
 }
 
@@ -217,7 +217,7 @@ h2, h2 a {
 
 .edu h1{
     font-family: 'Playfair Display', serif;
-    font-size:60px;
+    font-size:65px;
     font-weight:800;
     padding:10px;
     text-align:right;
@@ -229,12 +229,13 @@ h2, h2 a {
 .edu h2 {
     font-family:'Open Sans', serif;
     text-transform:uppercase;
-    font-weight:700;
+    font-weight:600;
     font-size:20px;
+    font-style:italic;
     background:#C25100;
     color:white;
-    padding:5px 8px;
-    border-radius:10px;
+    padding:10px 15px;
+    border-radius:25px;
     width:fit-content;
     margin-top:10px;
 }
@@ -279,18 +280,18 @@ h2, h2 a {
     width: 900px;
     height:462px;
     border-radius: 10px 10px;
-    /*border-radius:58% 42% 62% 38% / 26% 34% 66% 74% ;*/
     transition: 1s;
 }
 
 .exp h1{
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size:50px;
     margin-left:20px;
     position: relative;
     text-transform: uppercase;
     display: inline-block;
+    font-style:italic;
 }
 
 .exp h2 {
@@ -301,7 +302,6 @@ h2, h2 a {
     position: relative;
     display: inline-block;
     text-transform: lowercase;
-    font-style:italic;
 }
 
 
@@ -337,9 +337,10 @@ h2, h2 a {
 
 .desc {
     float:left;
-    width:570px;
+    width:600px;
+    font-size:18px;
     font-family: 'Roboto', sans-serif;
-    height:315px;
+    height:fit-content;
     padding: 18px 25px;
     margin: 20px 15px -40px 20px;
     border: 2px solid black;
@@ -348,12 +349,75 @@ h2, h2 a {
 
 .desc ul {
     list-style-type: '⚬';
-    margin-top:-27px;
+    margin-top:-28px;
     margin-left:-25px;
+    margin-bottom:-22px;
 }
 
 .desc li{
     padding-left:25px;
+    margin-bottom:-5px;
+}
+
+.projects {
+    margin-bottom: 20px;
+    margin-top:20px;
+    padding: 10px;
+    width: 900px;
+    height:fit-content;
+    border:1px solid black;
+    border-radius: 10px 10px;
+    transition: 1s;
+}
+
+.skills_box{
+    margin-bottom: 20px;
+    margin-top:20px;
+    padding: 10px;
+    width: 900px;
+    height:fit-content;
+    font-size:20px;
+    border-radius: 10px 10px;
+    transition: 1s;
+}
+
+.skill_e {
+    width:fit-content;
+    display:inline-block;
+    text-align:center;
+    padding:8px 13px;
+    font-weight:700;
+    margin:10px;
+    border-radius:25px;
+    border:3px solid #C25100;
+    color: white;
+    background: #C25100;
+}
+
+.skill_f{
+    width:fit-content;
+    display:inline-block;
+    text-align:center;
+    padding:8px 13px;
+    font-weight:700;
+    margin:10px;
+    border:3px solid;
+    border-radius:25px;
+    border-image:-webkit-linear-gradient(top left, #C25100, rgb(243, 199, 76)) 1;
+    background: -webkit-linear-gradient(top left, #C25100, rgb(243, 199, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.involvement {
+    margin-bottom: 20px;
+    margin-top:20px;
+    padding: 10px;
+    width: 900px;
+    height:462px;
+    border:1px solid black;
+    border-radius: 10px 10px;
+    transition: 1s;
 }
 
 .post {
